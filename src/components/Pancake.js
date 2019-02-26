@@ -8,15 +8,17 @@ class Pancake extends React.Component {
       timeCooked: 0,
       flippedAt: undefined
     };
+
+    componentDidMount(){
+      this.setInterval()
+    }
+
+    componentWillUnmount(){
+      global.clearInterval(this.interval);
+    }
   }
 
-  componentDidMount(){
-    this.setInterval()
-  }
 
-  componentWillUnmount(){
-    global.clearInterval(this.interval);
-  }
 
   // TODO: create a componentDidMount() which will start the interval to count how long the pancake has been cooking
 
