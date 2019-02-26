@@ -14,6 +14,10 @@ class Pancake extends React.Component {
     this.setInterval()
   }
 
+  componentWillUnmount(){
+    global.clearInterval(this.interval);
+  }
+
   // TODO: create a componentDidMount() which will start the interval to count how long the pancake has been cooking
 
   // TODO: create a componentWillUnmount() which will clear the interval
